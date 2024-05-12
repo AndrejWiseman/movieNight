@@ -74,12 +74,6 @@ WSGI_APPLICATION = 'movieNight.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-
-# Coackroach
-# DATABASES = {
-#     'default': dj_database_url.config(default=os.environ['DATABASE_URL'], engine='django_cockroachdb')
-# }
-
 DATABASES = {
     'default': {
         'ENGINE': 'django_cockroachdb',
