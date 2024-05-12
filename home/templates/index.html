@@ -1,7 +1,13 @@
 {% extends 'base.html' %}
+{% load static %}
 
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
 
 
 {% block content %}
-    <h2>Index page</h2>
+    <section id="hero">
+        <img src="{% static 'images/slika1.jpg' %}" alt="slika">
+    </section>
 {% endblock %}
