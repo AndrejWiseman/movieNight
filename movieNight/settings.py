@@ -74,9 +74,23 @@ WSGI_APPLICATION = 'movieNight.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+
+# Coackroach
 DATABASES = {
     'default': dj_database_url.config(default=os.environ['DATABASE_URL'], engine='django_cockroachdb')
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ.get('PGDATABASE'),
+#         'USER': os.environ.get('PGUSER'),
+#         'PASSWORD': os.environ.get('PGPASSWORD'),
+#         'HOST': os.environ.get('PGHOST'),
+#         'PORT': '5432',
+#     }
+# }
 
 
 # Password validation
