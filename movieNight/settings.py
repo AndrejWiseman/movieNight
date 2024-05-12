@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'movieNight.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django_cockroachdb',
         'NAME': os.environ.get('PGDATABASE'),
         'USER': os.environ.get('PGUSER'),
         'PASSWORD': os.environ.get('PGPASSWORD'),
