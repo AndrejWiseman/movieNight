@@ -9,17 +9,17 @@ menuIcon.addEventListener('click', () => {
 
 // Animacije
 
-
-
 // Animacija da li je za mobilne telefone
 let mobileMedia = gsap.matchMedia();
 
 mobileMedia.add('(max-width: 800px)', () => {
     const timeLineMobile = gsap.timeline();
 
-    timeLineMobile.from('#hero > img', {
+    timeLineMobile
+        .from('#hero > img', {
         opacity: 0
-    }).from('nav', {
+    })
+        .from('nav', {
         y: -100,
         ease: 'expo.out',
         duration: '1.7',
@@ -27,11 +27,13 @@ mobileMedia.add('(max-width: 800px)', () => {
         opacity: 0,
         duration: 1,
 
-    }, '-=1').from('nav .menu-ikona', {
+    }, '-=1')
+        .from('nav .menu-ikona', {
         x: 30,
         opacity: 0,
         duration: 1
-    }, '-=1').from('.mobile-menu-elementi a', {
+    }, '-=1')
+        .from('.mobile-menu-elementi a', {
         opacity: 0,
         scale: 0.8,
         duration: 1.5,
@@ -43,17 +45,21 @@ mobileMedia.add('(max-width: 800px)', () => {
 mobileMedia.add('(min-width: 801px)', () => {
     const timeLineDesktop = gsap.timeline();
 
-    timeLineDesktop.from('#hero > img', {
+    timeLineDesktop
+        .from('#hero > img', {
         opacity: 0
-    }).from('nav', {
+    })
+        .from('nav', {
         y: -100,
         ease: 'expo.out',
         duration: '1.7',
-    }, '-=.6').from('nav .logo', {
+    }, '-=.6')
+        .from('nav .logo', {
         opacity: 0,
         duration: 1,
 
-    }, '-=1').from('nav .meni-elementi a', {
+    }, '-=1')
+        .from('nav .meni-elementi a', {
         opacity: 0,
         scale: 0.8,
         duration: 1.5,

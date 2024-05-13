@@ -3,7 +3,7 @@
 nav {
     position: fixed;
     top: 0;
-    background: #fff;
+    background: var(--nav);
     left: 0;
     right: 0;
     padding: 0;
@@ -23,22 +23,26 @@ nav .kontejner {
 }
 
 .logo img {
-    width: 70px;
-    margin: 0;
+    width: 50px;
+    margin-right: 10px;
     /*border: 1px solid blue;*/
-    padding: 0;
+    padding: 10px 0;
 
 }
 .logo h1 {
     font-size: 1.3rem;
     margin: 0;
     letter-spacing: 1px;
-    font-family: Inter, sans-serif;
+    /*font-family: Poppins, sans-serif;*/
+    font-family: var(--fontTekst);
 }
 .logo a {
     text-decoration: none;
-    color: #0022b5;
+    color: var(--text1);
     font-weight: bold;
+}
+.logo span {
+    color: var(--text2);
 }
 
 
@@ -60,25 +64,29 @@ nav .menu-ikona {
 
 
 .meni-elementi a {
-    color: #111822;
+    color: var(--text1);
     text-decoration: none;
 }
+.meni-elementi a:hover {
+    color: var(--text2);
+}
 .mobile-menu-elementi a {
-    color: #111822;
+    color: var(--text1);
     text-decoration: none;
-
+    padding: 0 20px;
 }
 
 .mobile-menu-elementi {
     position: absolute;
     display: flex;
     flex-direction: column;
-    background: #fff;
-    top: 70px;
-    right: 30px;
+    background: var(--nav);
+    top: 60px;
+    right: 10px;
     gap: 10px;
     align-items: center;
     padding: 10px;
+    border-radius: 8px;
 }
 
 /*Hidden items*/
@@ -91,11 +99,19 @@ nav .menu-ikona, .mobile-menu-elementi {
         display: none;
     }
     .logo img {
-        width: 50px;
+        width: 40px;
+    }
+    .logo h1 {
+        font-size: 1rem;
+    }
+
+    nav {
+        padding: 0 10px;
     }
 
     nav .menu-ikona {
         display: block;
+        color: var(--text1);
     }
     .mobile-menu-elementi {
         display: flex;
