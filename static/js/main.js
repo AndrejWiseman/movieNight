@@ -16,14 +16,15 @@ mobileMedia.add('(max-width: 800px)', () => {
     const timeLineMobile = gsap.timeline();
 
     timeLineMobile
-        .from('#hero > img', {
+        .from('#hero', {
         opacity: 0
-    })
+    }, '+=.1')
         .from('nav', {
         y: -100,
         ease: 'expo.out',
         duration: '1.7',
-    }, '-=.6').from('nav .logo', {
+    }, '-=.6')
+        .from('nav .logo', {
         opacity: 0,
         duration: 1,
 
@@ -46,9 +47,9 @@ mobileMedia.add('(min-width: 801px)', () => {
     const timeLineDesktop = gsap.timeline();
 
     timeLineDesktop
-        .from('#hero > img', {
+        .from('#hero', {
         opacity: 0
-    })
+    }, '+=.1')
         .from('nav', {
         y: -100,
         ease: 'expo.out',
@@ -66,8 +67,30 @@ mobileMedia.add('(min-width: 801px)', () => {
         ease: 'elastic.out(1, .5)',
         stagger: 0.3
     }, '-=1')
+
 })
 
+mobileMedia.add('(max-width: 800px)', () => {
+    const tlMobile = gsap.timeline();
+    tlMobile
+        .from('.element', {
+        opacity: 0,
+        stagger: 0.3,
+        duration: 1,
+        ease: 'elastic.out(1, 0.5)'
+    }, '-=0.1')
+})
+
+mobileMedia.add('(min-width: 801px)', () => {
+    const tlMobile = gsap.timeline();
+    tlMobile
+        .from('.element', {
+        opacity: 0,
+        stagger: 0.2,
+        duration: 0.7,
+        ease: 'elastic.out(1, 0.5)'
+    }, '-=0.1')
+})
 
 
 

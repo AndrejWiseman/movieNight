@@ -10,10 +10,27 @@
 {% endblock %}
 
 {% block content %}
-    <h2>Filmovi</h2>
 
-    {% for qs in queryset %}
-        <h3>{{ qs.naslov }}</h3>
-    {% endfor %}
+    <section class="indeks" >
+
+        <h2>Filmovi</h2>
+
+        <div class="film-grid">
+            {% for qs in queryset %}
+                <div class="element">
+                    <div class="el-slika">
+                        <a href="#">
+                            <img src="{{ qs.image.url }}" alt="{{ qs.naslov }}" class="el-slika-link">
+                        </a>
+                    </div>
+                    <div class="el-info">
+                        <p class="el-naslov">{{ qs.naslov }}</p>
+                        <p class="el-imdb"><small>{{ qs.godina }} | <span class="">IMDb</span> {{ qs.imdb_ocena }}</small></p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </section>
 
 {% endblock %}

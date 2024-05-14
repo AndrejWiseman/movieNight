@@ -6,7 +6,7 @@ nav {
     background: var(--nav);
     left: 0;
     right: 0;
-    padding: 0;
+    padding: 0 50px;
     z-index: 99;
 }
 
@@ -42,7 +42,7 @@ nav .kontejner {
     font-weight: bold;
 }
 .logo span {
-    color: var(--text2);
+    color: var(--50);
 }
 
 
@@ -68,7 +68,7 @@ nav .menu-ikona {
     text-decoration: none;
 }
 .meni-elementi a:hover {
-    color: var(--text2);
+    color: var(--50);
 }
 .mobile-menu-elementi a {
     color: var(--text1);
@@ -114,12 +114,14 @@ nav .menu-ikona, .mobile-menu-elementi {
         color: var(--text1);
     }
     .mobile-menu-elementi {
-        display: flex;
-        opacity: 0;
+        /*display: flex;*/
+        /*opacity: 0;*/
+        display: none;
         pointer-events: none;
     }
     .mobile-menu-elementi.active {
-        opacity: 1;
+        /*opacity: 1;*/
+        display: flex;
         pointer-events: auto;
     }
 

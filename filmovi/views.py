@@ -5,7 +5,7 @@ from .models import Filmovi
 # Create your views here.
 def filmovi(request):
 
-    queryset = Filmovi.objects.all()
+    queryset = Filmovi.objects.all().order_by('-date')
 
     context = {
         'queryset': queryset

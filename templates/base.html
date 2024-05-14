@@ -12,12 +12,25 @@
       {% endblock %}
   </head>
   <body>
-  
+
     {% include 'navbar.html' %}
-  
-    
-    {% block content %}
-    {% endblock %}
+
+    <div class="kontejner-box">
+
+        <div class="kont-info" id="hero">
+
+            <div class="kont-tag">
+                <h1>Žanrovi</h1>
+{#                {% include 'hero-left.html' %}#}
+            </div>
+
+            <div class="kont-section">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+
+    </div>
 
 
     {% block javascript %} {% endblock %}
