@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Filmovi
+{% endblock %}
+
+{% block css %}
+{#    <link rel="stylesheet" href="{% static 'css/filmovi.css' %}">#}
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="detail-box">
+
+        <div class="detail-info">
+            <div class="detail-img">
+                <img src="{{ film_detalj.image.url }}" alt="{{ film_detalj.naslov }}">
+            </div>
+
+            <div class="detail-name">
+                <div class="detail-naziv">
+                    <h1>{{ film_detalj.naslov }}</h1>
+                    <p>Originalni naslov: {{ film_detalj.originalni_naziv }}</p>
+                </div>
+
+                <div class="detail-god">
+                    <p>{{ film_detalj.godina }}</p>
+{#                    <p class="zanr">{{ film_detalj.taggs }}</p>#}
+                    <p class="imdb"><span>IMDb</span> {{ film_detalj.imdb_ocena }}</p>
+                </div>
+
+                <div class="dugmad">
+                    <a href="#" class="btn dugme">Gledaj</a>
+                    <a href="#" class="btn dugme">Preuzmi</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sadrzaj">
+            <h3>Sadržaj:</h3>
+            <p>{{ film_detalj.sadrzaj }}</p>
+        </div>
+
+    </div>
+
+
+
+
+{% endblock %}

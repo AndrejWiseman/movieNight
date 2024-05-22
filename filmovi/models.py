@@ -22,6 +22,5 @@ class Filmovi(models.Model):
     def __str__(self):
         return self.naslov
 
-    # def get_absolute_url(self):
-    #     return reverse('filmovi:filmovi_detail', kwargs={'slug': self.slug})
-    #
+    def get_absolute_url(self):
+        return reverse('filmovi:film_view', kwargs={'slug': self.slug})

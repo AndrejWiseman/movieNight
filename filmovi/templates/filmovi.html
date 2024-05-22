@@ -19,7 +19,7 @@
             {% for qs in queryset %}
                 <div class="element">
                     <div class="el-slika">
-                        <a href="#">
+                        <a href="{{ qs.get_absolute_url }}">
                             <img src="{{ qs.image.url }}" alt="{{ qs.naslov }}" class="el-slika-link">
                         </a>
                     </div>
@@ -28,6 +28,7 @@
                         <p class="el-imdb"><small>{{ qs.godina }} | <span class="">IMDb</span> {{ qs.imdb_ocena }}</small></p>
                     </div>
                 </div>
+
             {% endfor %}
         </div>
 

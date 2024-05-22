@@ -8,6 +8,7 @@
     --text2: #f8f3eb;
     --fontNaslov: "Libre Baskerville", serif;
     --fontTekst: "Montserrat", serif;
+
     --50: #f8f5ee;
     --100: #ede6d4;
     --200: #ddcdab;
@@ -115,7 +116,70 @@ body {
 
 
 
+/*STRANICA FILM DETALJ*/
 
+.detail-box {
+
+}
+
+.detail-info {
+    display: flex;
+    gap: 20px;
+}
+.detail-img img {
+    border-radius: 10px;
+    max-width: 100%;
+}
+.detail-naziv h1 {
+    color: var(--50);
+    font-size: 1.5rem;
+}
+.detail-naziv p {
+    color: var(--200);
+    font-size: 0.8rem;
+}
+
+.detail-god p {
+    color: var(--200);
+    margin: 0;
+    padding: 0;
+
+}
+.imdb span {
+    color: #DBA506;
+    font-weight: bold;
+}
+
+.sadrzaj {
+    margin-top: 20px;
+}
+.sadrzaj h3 {
+    color: var(--200);
+    font-size: 1.2rem;
+}
+.sadrzaj p {
+    color: var(--100);
+    font-size: 0.8rem;
+}
+
+.dugme {
+    text-decoration: none;
+    color: var(--50);
+    background: var(--btnGradDefault);
+    margin-top: 30px;
+}
+.dugme:hover {
+    background: var(--btnGradHover);
+    color: var(--50);
+}
+.dugme:active {
+    background: var(--btnGradActvie);
+    color: var(--50);
+}
+
+
+
+/*========================*/
 
 .kenburns-top {
     -webkit-animation:kenburns-top 15s infinite alternate-reverse both;
@@ -138,8 +202,16 @@ body {
      100%{-webkit-transform:scale(1.25) translateY(-15px);transform:scale(1.25) translateY(-15px);-webkit-transform-origin:top;transform-origin:top}
  }
 
+
+
+
+
 @media only screen and (max-width: 800px) {
     .film-grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .dugme {
+        margin: 2px;
     }
 }
