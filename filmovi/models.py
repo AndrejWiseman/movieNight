@@ -1,7 +1,7 @@
 from django.db import models
 from django.urls import reverse
 
-# from taggit.managers import TaggableManager
+from taggit.managers import TaggableManager
 
 
 # Create your models here.
@@ -10,7 +10,7 @@ class Filmovi(models.Model):
     originalni_naziv = models.CharField(max_length=120, null=True)
     slug = models.SlugField(default="", null=False)
     godina = models.CharField(max_length=120, null=True, blank=True)
-    # tags = TaggableManager()
+    tags = TaggableManager()
     imdb_ocena = models.CharField(max_length=120, null=True)
     sadrzaj = models.TextField()
     link_za_preuzimanje = models.CharField(default="", max_length=320)

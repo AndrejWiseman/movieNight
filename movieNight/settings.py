@@ -1,4 +1,5 @@
 import os
+import sys
 from pathlib import Path
 import dj_database_url
 from dotenv import load_dotenv
@@ -8,6 +9,8 @@ load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+sys.path.append(str(BASE_DIR / 'utils'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -35,6 +38,7 @@ INSTALLED_APPS = [
 
     'cloudinary',
     'cloudinary_storage',
+    'taggit',
 
     'home',
     'filmovi',
@@ -67,6 +71,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            "builtins": [
+                "",
+            ]
         },
     },
 ]

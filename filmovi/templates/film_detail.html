@@ -10,7 +10,7 @@
 {% endblock %}
 
 
-{% block content %}
+{% block detalj %}
 
     <div class="detail-box">
 
@@ -27,7 +27,7 @@
 
                 <div class="detail-god">
                     <p>{{ film_detalj.godina }}</p>
-{#                    <p class="zanr">{{ film_detalj.taggs }}</p>#}
+                    <p class="zanr">{{ film_detalj.tags.all|join:" / " }}</p>
                     <p class="imdb"><span>IMDb</span> {{ film_detalj.imdb_ocena }}</p>
                 </div>
 
